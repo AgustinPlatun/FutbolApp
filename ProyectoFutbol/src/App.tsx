@@ -5,16 +5,10 @@ import './App.css';
 
 function App() {
   return (
-    <Router>
-      <Navbar />
-      <div className="app-container">
-        <Routes>
-          <Route path="/" element={<div>Home Page</div>} />
-          <Route path="/login" element={<div>Login Page</div>} />
-          <Route path="/register" element={<div>Register Page</div>} />
-        </Routes>
+      <div>
+        <Navbar />
+        <h1>Inicio</h1>
       </div>
-    </Router>
   );
 }
 

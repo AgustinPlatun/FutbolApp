@@ -9,10 +9,10 @@ const Navbar: FC = () => {
       <div className="container-fluid">
 
         <div className="d-flex ms-auto align-items-center">
-          <Link to="/register" className="btn btn-primary me-2">
+          <Link to="/registrar" className="btn btn-primary me-2">
             Registrarse
           </Link>
-          <Link to="/login" className="btn btn-outline-light">
+          <Link to="/inicioSesion" className="btn btn-outline-light">
             Iniciar Sesión
           </Link>
         </div>
