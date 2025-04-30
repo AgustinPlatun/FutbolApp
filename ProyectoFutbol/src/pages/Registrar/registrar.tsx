@@ -2,11 +2,13 @@ import React, { useState } from "react";
 import Navbar from "../../components/navBar/navBar";
 import "./registrar.css"; // Importa el archivo CSS
 import axios from "axios";
+import {useNavigate } from "react-router-dom";
 
 const Registrar: React.FC = () => {
     const [nombre, setNombre] = useState('');
     const [email, setEmail] = useState('');
     const [contraseña, setContraseña] = useState('');
+    const navigate = useNavigate();
 
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
@@ -17,9 +19,10 @@ const Registrar: React.FC = () => {
                 email,
                 contraseña,
             });
-            alert(response.data); // Maneja la respuesta del servidor
+            alert("Registro exitoso pa"); // Maneja la respuesta del servidor
+            navigate("/"); 
         } catch (error) {
-            console.error("Error al registrar:", error); // Maneja el error
+            alert("Error al registrar"); // Maneja el error
         }
     };
 
