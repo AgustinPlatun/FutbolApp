@@ -1,9 +1,11 @@
 import { FC } from 'react';
-import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 import './Navbar.css';
 
 const Navbar: FC = () => {
+  const navigate = useNavigate(); // Hook para redirección
+
   return (
     <nav className="navbar navbar-expand-lg navbar-dark fixed-top shadow-sm">
       <div className="container-fluid">
@@ -11,19 +13,26 @@ const Navbar: FC = () => {
           Logo
         </div>
         <div className="mx-auto">
-          <Link to="/" className="btn btn-light">
+          <button className="btn btn-light" onClick={() => navigate('/')}>
             Inicio
-          </Link>
+          </button>
         </div>
         <div className="d-flex ms-auto align-items-center">
-          <Link to="/registrar" className="btn btn-primary me-2">
+          {/* Botón para Registrarse */}
+          <button
+            className="btn btn-primary me-2"
+            onClick={() => navigate('/registrar')}
+          >
             Registrarse
-          </Link>
-          <Link to="/inicioSesion" className="btn btn-outline-light">
+          </button>
+          {/* Botón para Iniciar Sesión */}
+          <button
+            className="btn btn-outline-light"
+            onClick={() => navigate('/inicioSesion')}
+          >
             Iniciar Sesión
-          </Link>
+          </button>
         </div>
-
       </div>
     </nav>
   );
