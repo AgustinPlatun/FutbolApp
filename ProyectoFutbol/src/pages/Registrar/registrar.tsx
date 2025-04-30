@@ -20,7 +20,7 @@ const Registrar: React.FC = () => {
                 contraseña,
             });
             alert("Registro exitoso pa"); // Maneja la respuesta del servidor
-            navigate("/");
+            navigate("/home");
         } catch (error) {
             alert("Error al registrar"); // Maneja el error
         }

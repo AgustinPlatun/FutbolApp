@@ -23,8 +23,8 @@ const InicioSesion: React.FC = () => {
 
       if (response.ok) {
         const data = await response.json();
-        alert(`Inicio de sesión exitoso, bienvenido ${data.nombre}!`);
-        navigate('/');
+        alert(`Inicio de sesión exitoso, bienvenido!`);
+        navigate('/home');
       } else {
         const errorData = await response.json();
         alert(errorData.error);
