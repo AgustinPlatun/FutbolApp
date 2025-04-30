@@ -7,7 +7,14 @@ const Navbar: FC = () => {
   return (
     <nav className="navbar navbar-expand-lg navbar-dark fixed-top shadow-sm">
       <div className="container-fluid">
-
+        <div className="logo">
+          Logo
+        </div>
+        <div className="mx-auto">
+          <Link to="/" className="btn btn-light">
+            Inicio
+          </Link>
+        </div>
         <div className="d-flex ms-auto align-items-center">
           <Link to="/registrar" className="btn btn-primary me-2">
             Registrarse
@@ -21,4 +28,5 @@ const Navbar: FC = () => {
     </nav>
   );
 };
+
 export default Navbar;

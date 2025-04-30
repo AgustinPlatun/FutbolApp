@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import './InicioSesion.css'; // Archivo de estilos CSS
+import './InicioSesion.css';
 import Navbar from '../../components/navBar/navBar';
 
 const InicioSesion: React.FC = () => {
@@ -16,18 +16,18 @@ const InicioSesion: React.FC = () => {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
-          email: usuario, // Enviar el email como "usuario"
-          contraseña: password, // Enviar la contraseña
+          email: usuario,
+          contraseña: password,
         }),
       });
 
       if (response.ok) {
         const data = await response.json();
         alert(`Inicio de sesión exitoso, bienvenido ${data.nombre}!`);
-        navigate('/'); // Redirige al dashboard
+        navigate('/');
       } else {
         const errorData = await response.json();
-        alert(errorData.error); // Muestra el mensaje de error del backend
+        alert(errorData.error);
       }
     } catch (error) {
       console.error("Error al conectar con el servidor:", error);

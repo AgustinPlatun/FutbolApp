@@ -51,7 +51,7 @@ def inicio_sesion():
     usuario = Usuario.query.filter_by(email=data['email']).first()
     if not usuario or not check_password_hash(usuario.contraseña, data['contraseña']):
         return jsonify({'message': 'Credenciales inválidas'}), 401
-    return jsonify({'message': 'Inicio de sesión exitoso', 'usuario': usuario.nombre}), 200
+    return jsonify({'message': 'Inicio de sesión exitoso', 'usuario': usuario.nombre }), 200
 
 if __name__ == '__main__':
     app.run(debug=True, port=5000)
