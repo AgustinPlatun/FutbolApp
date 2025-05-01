@@ -12,11 +12,6 @@ const Navbar: FC = () => {
         <div className="logo">
           Logo
         </div>
-        <div className="mx-auto">
-          <button className="btn btn-light" onClick={() => navigate('/')}>
-            Inicio
-          </button>
-        </div>
         <div className="d-flex ms-auto align-items-center">
           {/* Botón para Registrarse */}
           <button

@@ -1,11 +1,12 @@
+
 .navbar-home {
     background-color: #212529;
     color: white;
     padding: 10px 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     display: flex;
     flex-direction: column;
     align-items: center;
-    position: relative;
   }
   
   .navbar-container {
@@ -31,6 +32,9 @@
     padding: 5px 10px;
     border-radius: 5px;
     transition: background-color 0.3s ease;
+    width: auto; /* Ajusta el ancho al contenido del botón */
+    flex-shrink: 0; /* Evita que los botones se expandan */
+    display: inline-block; /* Asegura que los botones no ocupen todo el ancho */
   }
   
   .btn-back:hover,
